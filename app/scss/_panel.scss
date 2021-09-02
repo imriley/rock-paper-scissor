@@ -1,0 +1,52 @@
+.score__panel {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid $headeroutline;
+    flex-direction: row;
+    border-radius: 8px;
+    margin-top: 1.875rem;
+    padding: 0.625rem;
+    @include breakpoint(medium) {
+        margin-top: 3rem;
+    }
+    &__title {
+        color: #fff;
+        text-transform: uppercase;
+        margin: 5px 0 5px 10px;
+        line-height: 1.5625rem;
+        @include breakpoint(xlarge) {
+            line-height: 1.875rem;
+        }
+        h1 {
+            font-size: 1.875rem;
+            @include breakpoint(xlarge) {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .scoreboard {
+        background: #fff;
+        border-radius: 8px;
+        text-align: center;
+        margin: 5px 10px;
+        width: 5rem;
+        @include breakpoint(xlarge) {
+            width: 6.25rem;
+        }
+        &__title {
+            font-size: 0.875rem;
+            color: $scoretext;
+            text-transform: uppercase;
+            margin-top: 0.625rem;
+        }
+        &__value {
+            margin-top: -8px;
+            h1 {
+                font-size: 1.875rem;
+                @include breakpoint(xlarge) {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}

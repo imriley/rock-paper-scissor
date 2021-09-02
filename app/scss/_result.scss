@@ -1,0 +1,131 @@
+.result {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 35%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    width: calc(100% - 3.75rem);
+    max-width: 46.25rem;
+    opacity: 0;
+    flex-wrap: wrap;
+    &.active {
+        opacity: 1;
+    }
+    &__title {
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-transform: uppercase;
+        flex-basis: 100%;
+        margin-top: 1.25rem;
+        
+        @include breakpoint(xlarge) {
+            flex-basis: 33.33%;
+            order: 2;
+        }
+        &.active {
+            display: flex;
+        }
+        h1 {
+            font-size: 2.8125rem;
+            letter-spacing: 0.1rem;
+        }
+        .play-again-btn {
+            background: #ffffff;
+            color: $dktext;
+            padding: 0.9375rem;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.125rem;
+            margin-top: 1.25rem;
+            width: 55%;
+            @include breakpoint(small) {
+                width: 40%;
+            }
+            @include breakpoint(medium) {
+                width: 35%;
+            }
+            @include breakpoint(large) {
+                width: 25%;
+            }
+            @include breakpoint(xlarge) {
+                width: 70%;
+            }
+        }
+    }
+    &__player, &__computer {
+        height: 12.5rem;
+        flex-basis: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        @include breakpoint(xsmall) {
+            height: 15.625rem;
+        }
+        @include breakpoint(xlarge) {
+            flex-basis: 33.33%;
+        }
+        .invisible {
+            border-radius: 50%;
+            &.active {
+                animation: rotate 1s backwards;
+            }
+        }
+    }
+    @include breakpoint(xlarge) {
+        &__player {
+            order: 1;
+        }
+        &__computer {
+            order: 3;
+        }
+    }
+    .player__status, .computer__status {
+        h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            @include breakpoint(large) {
+                font-size: 1.375rem;
+            }
+        }
+    }
+    #player, #computer {
+        position: relative;
+        height: 6.875rem;
+        width: 6.875rem;
+        border-radius: 50%;
+        @include breakpoint(xsmall) {
+            height: 9.375rem;
+            width: 9.375rem;
+        }
+        @include breakpoint(medium) {
+            height: 10rem;
+            width: 10rem;
+        }
+        span {
+            background: #fff;
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: inset 0 5px 2px 2px rgba(0, 0, 0, .25);
+        }
+        img {
+            width: 60%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

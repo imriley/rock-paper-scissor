@@ -1,37 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/style.css" />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="score__panel">
+        <div class="score__panel__title">
+          <h1>
+            Rock <br />paper <br />
+            Scissors
+          </h1>
+        </div>
+        <div class="scoreboard">
+          <div class="scoreboard__title">Score</div>
+          <div class="scoreboard__value">
+            <h1 id="score">0</h1>
+          </div>
+        </div>
+      </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+      <div class="game_choices">
+        <div id="rock" class="button">
+          <span><img src="images/icon-rock.svg" alt="Rock" /></span>
+        </div>
+        <div id="paper" class="button">
+          <span><img src="images/icon-paper.svg" alt="Paper" /></span>
+        </div>
+        <div id="scissors" class="button">
+          <span><img src="images/icon-scissors.svg" alt="Scissors" /></span>
+        </div>
+      </div>
 
-  Score
-  Rules
+      <div class="result">
+        <div class="result__player">
+          <div class="player__status">
+            <h2>You Picked</h2>
+          </div>
+          <div id="player">
+            <span id="game-1"><img src="images/icon-paper.svg" alt="paper" id="playerimg" /></span>
+          </div>
+        </div>
 
-  You Picked
-  The House Picked
+        <div class="result__computer">
+          <div class="computer__status">
+            <h2>The House Picked</h2>
+          </div>
+          <div class="invisible">
+            <div id="computer">
+              <span id="game-2"><img src="images/icon-rock.svg" alt="rock" id="computerimg" /></span>
+            </div>
+          </div>
+        </div>
 
-  You Win
-  You Lose
+        <div class="result__title">
+          <div>
+            <h1 id="result__title__status">You win</h1>
+          </div>
+          <div class="play-again-btn">Play Again</div>
+        </div>
+      </div>
 
-  Play Again
+      <div class="rules__btn">
+        <a href="#" id="btn">Rules</a>
+      </div>
+      <div class="rules__overlay">
+        <div class="rules__container">
+          <div class="rules__container__header">
+            <div class="rules__container__title">Rules</div>
+            <div class="cross-btn">
+              <img src="images/icon-close.svg" alt="close" />
+            </div>
+          </div>
+          <div class="rules__container__img"><img src="images/image-rules.svg" alt="rules" /></div>
+        </div>
+      </div>
+    </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="https://github.com/imriley/rock-paper-scissor.git" target="_blank">Riley</a>.
+    </div>
+    <script src="app/js/script.js"></script>
+  </body>
 </html>

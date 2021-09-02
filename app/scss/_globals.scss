@@ -1,0 +1,73 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-image: linear-gradient($bggradient1, $bggradient2);
+    background-repeat: no-repeat;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    .no-scroll {
+        overflow: hidden;
+    }
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 50rem;
+    padding: 0rem 1.875rem;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+$breakpoints: ("xxsmall": "25em", "xsmall": "28.75em", "small": "34.5em", "medium": "43.375em", "large": "47.8125em", "xlarge":"53em", "xxlarge": "64em");
+@mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateX(0);
+    }
+    to {
+        transform: rotateX(359deg);
+    }
+}
+
+.rock {
+    background: linear-gradient($rockgradient1, $rockgradient2);
+    box-shadow: inset -2px -8px 2px 2px rgba(99, 28, 28, 0.25);
+    @include breakpoint(xlarge) {
+        box-shadow: inset -2px -10px 2px 2px rgba(0, 0, 0, .25);
+    }
+}
+.paper {
+    background: linear-gradient($papergradient1, $papergradient2);
+    box-shadow: inset -2px -8px 2px 2px rgba(99, 28, 28, 0.25);
+    @include breakpoint(xlarge) {
+        box-shadow: inset -2px -10px 2px 2px rgba(0, 0, 0, .25);
+    }
+}
+.scissors {
+    background: linear-gradient($scissorsgradient1, $scissorsgradient2);
+    box-shadow: inset -2px -8px 2px 2px rgba(99, 28, 28, 0.25);
+    @include breakpoint(xlarge) {
+        box-shadow: inset -2px -10px 2px 2px rgba(0, 0, 0, .25);
+    }
+}

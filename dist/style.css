@@ -511,10 +511,20 @@ h1, h2, h3 {
 
 .result__player .invisible, .result__computer .invisible {
   border-radius: 50%;
+  background: #131335;
+}
+
+.result__player .invisible div, .result__computer .invisible div {
+  transition: opacity 300ms ease-in-out;
+  opacity: 0;
 }
 
 .result__player .invisible.active, .result__computer .invisible.active {
   animation: rotate 1s backwards;
+}
+
+.result__player .invisible.active div, .result__computer .invisible.active div {
+  opacity: 1;
 }
 
 @media (min-width: 53em) {

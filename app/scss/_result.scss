@@ -73,8 +73,16 @@
         }
         .invisible {
             border-radius: 50%;
+            background: hsl(240, 48%, 14%);
+            div {
+                transition: opacity 300ms ease-in-out;
+                opacity: 0;
+            }
             &.active {
                 animation: rotate 1s backwards;
+                div {
+                    opacity: 1;
+                }
             }
         }
     }
